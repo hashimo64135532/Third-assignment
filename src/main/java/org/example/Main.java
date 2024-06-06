@@ -9,7 +9,7 @@ public class Main {
         players.add(new Player("久保建英", "Real sociedad", "LALIGA", 6));
         players.add(new Player("冨安健洋", "Arsenal FC", "Premier League", 2));
         players.add(new Player("遠藤航", "Liverpool FC", "Premier League", 3));
-        players.add(new Player("三苫薫", "Brighton & Hove Albion FC", "Premier League", 10));
+        players.add(new Player("三苫薫", "Brighton & Hove Albion FC", "Premier League", 11));
         players.add(new Player("南野拓実", "AS Monaco", "Ligue 1", 2));
         players.add(new Player("守田英正", "Sporting CP", "Liga Portugal Betclic", 1));
 
@@ -18,14 +18,14 @@ public class Main {
                 checkRanking(player);
                 if (player.getRanking() <= 4) {
                     System.out.println("CL出場");
-                    System.out.println(player.getName() + " : " + player.getTeam() + " : " + player.getLeague());
+                    System.out.println(player.getName() + " : " + player.getTeam() + " : " + player.getLeague() + " : " + player.getRanking() + "位");
                 } else if (player.getRanking() <= 6) {
                     System.out.println("EL出場");
-                    System.out.println(player.getName() + " : " + player.getTeam() + " : " + player.getLeague());
+                    System.out.println(player.getName() + " : " + player.getTeam() + " : " + player.getLeague() + " : " + player.getRanking() + "位");
                 }
             } catch (InvalidRankingException e) {
                 System.out.println("出場権獲得ならず: " + e.getMessage());
-                System.out.println(player.getName() + " : " + player.getTeam() + " : " + player.getLeague());
+                System.out.println(player.getName() + " : " + player.getTeam() + " : " + player.getLeague() + " : " + player.getRanking() + "位");
             }
         }
     }
